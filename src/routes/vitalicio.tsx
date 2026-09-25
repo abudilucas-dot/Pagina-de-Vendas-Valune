@@ -109,7 +109,7 @@ function TopBar() {
             aria-label={open ? "Fechar menu" : "Abrir menu"}
             className="btn-ghost inline-flex size-10 items-center justify-center rounded-xl md:hidden"
           >
-            {open ? <Menu className="size-5" /> : <Menu className="size-5" />}
+            {open ? <X className="size-5" /> : <Menu className="size-5" />}
           </button>
         </div>
       </div>
@@ -260,7 +260,7 @@ function Hero() {
             ))}
           </ul>
 
-          <p className="glass mt-8 inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm">
+          <p className="glass mt-8 inline-flex flex-wrap items-center justify-center gap-x-1.5 gap-y-1 rounded-full px-4 py-2 text-sm">
             <Sparkles className="size-4 text-gold" />
             Acesso completo por <strong className="font-semibold">R$ 49,90</strong> — pagamento único
           </p>
