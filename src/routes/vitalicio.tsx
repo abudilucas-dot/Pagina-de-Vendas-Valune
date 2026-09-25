@@ -30,7 +30,7 @@ const SIGNUP_HREF = `${APP_BASE_URL}/cadastro`;
 const LOGIN_HREF = `${APP_BASE_URL}/login`;
 const TERMS_HREF = `${APP_BASE_URL}/termos`;
 const PRIVACY_HREF = `${APP_BASE_URL}/privacidade`;
-const SUPPORT_HREF = `${APP_BASE_URL}/suporte`;
+const SUPPORT_HREF = "mailto:abudilucas@gmail.com?subject=Suporte%20-%20Valune";
 
 export const Route = createFileRoute("/vitalicio")({
   head: () => ({
@@ -751,8 +751,9 @@ function Footer() {
               Política de Privacidade
             </a>
             <a href={SUPPORT_HREF} className="text-muted-foreground hover:text-foreground">
-              Suporte
+              Suporte por e-mail
             </a>
+            <p className="text-xs text-muted-foreground">Resposta em até 2 dias úteis.</p>
           </nav>
         </div>
 
