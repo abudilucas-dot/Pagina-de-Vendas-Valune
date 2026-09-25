@@ -25,8 +25,12 @@ import {
 } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 
-const SIGNUP_HREF = "/cadastro";
-const LOGIN_HREF = "/login";
+const APP_BASE_URL = "https://app-de-finan-as-pessoais-ten.vercel.app";
+const SIGNUP_HREF = `${APP_BASE_URL}/cadastro`;
+const LOGIN_HREF = `${APP_BASE_URL}/login`;
+const TERMS_HREF = `${APP_BASE_URL}/termos`;
+const PRIVACY_HREF = `${APP_BASE_URL}/privacidade`;
+const SUPPORT_HREF = `${APP_BASE_URL}/suporte`;
 
 export const Route = createFileRoute("/vitalicio")({
   head: () => ({
@@ -260,9 +264,12 @@ function Hero() {
             ))}
           </ul>
 
-          <p className="glass mt-8 inline-flex flex-wrap items-center justify-center gap-x-1.5 gap-y-1 rounded-full px-4 py-2 text-sm">
+          <p className="glass mt-8 inline-flex flex-wrap items-center justify-center gap-x-2 gap-y-1 rounded-full px-4 py-2 text-sm">
             <Sparkles className="size-4 text-gold" />
-            Acesso completo por <strong className="font-semibold">R$ 49,90</strong> — pagamento único
+            <span className="font-medium text-gold">Oferta de lançamento</span>
+            <span>·</span>
+            <strong className="font-semibold">R$ 49,90</strong>
+            <span>em pagamento único</span>
           </p>
         </Reveal>
 
@@ -610,8 +617,10 @@ function Offer() {
           <div className="glass mt-10 rounded-[2rem] p-7 text-left sm:p-9">
             <div className="flex flex-wrap items-end justify-between gap-4">
               <div>
-                <p className="text-sm text-muted-foreground">Valune Vitalício</p>
+                <p className="text-sm font-medium text-gold">Oferta de lançamento</p>
+                <p className="mt-1 text-sm text-muted-foreground">Valune Vitalício</p>
                 <p className="mt-1 font-display text-4xl font-semibold sm:text-5xl">R$ 49,90</p>
+                <p className="mt-2 text-xs text-muted-foreground">Pagamento único · sem mensalidade</p>
               </div>
               <span className="rounded-full border border-border px-3 py-1 text-xs text-teal">
                 Pagamento único
@@ -735,13 +744,13 @@ function Footer() {
             </p>
           </div>
           <nav aria-label="Links do rodapé" className="flex flex-col gap-2 text-sm">
-            <a href="/termos" className="text-muted-foreground hover:text-foreground">
+            <a href={TERMS_HREF} className="text-muted-foreground hover:text-foreground">
               Termos de Uso
             </a>
-            <a href="/privacidade" className="text-muted-foreground hover:text-foreground">
+            <a href={PRIVACY_HREF} className="text-muted-foreground hover:text-foreground">
               Política de Privacidade
             </a>
-            <a href="/suporte" className="text-muted-foreground hover:text-foreground">
+            <a href={SUPPORT_HREF} className="text-muted-foreground hover:text-foreground">
               Suporte
             </a>
           </nav>
