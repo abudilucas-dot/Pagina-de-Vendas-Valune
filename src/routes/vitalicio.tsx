@@ -104,7 +104,7 @@ function TopBar() {
             Entrar
           </a>
           <a href={CHECKOUT_HREF} className="btn-primary rounded-xl px-4 py-2 text-sm">
-            Comprar acesso
+            Comece aqui
           </a>
           <button
             type="button"
@@ -236,12 +236,16 @@ function Hero() {
             lugar. Tenha acesso vitalício em pagamento único, sem mensalidade.
           </p>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <p className="mt-8 flex items-center gap-2 text-sm font-medium text-teal">
+            <ShieldCheck className="size-4 shrink-0" />
+            Você tem 7 dias de garantia.
+          </p>
+          <div className="mt-3 flex flex-col gap-3 sm:flex-row">
             <a
               href={CHECKOUT_HREF}
               className="btn-primary inline-flex items-center justify-center gap-2 rounded-2xl px-6 py-3.5 text-base"
             >
-              Comprar acesso vitalício <ArrowRight className="size-4" />
+              Comece aqui <ArrowRight className="size-4" />
             </a>
             <a
               href="#como-funciona"
@@ -451,12 +455,16 @@ function HowItWorks() {
         </ol>
 
         <Reveal delay={120}>
-          <div className="mt-10 flex justify-center">
+          <div className="mt-10 flex flex-col items-center">
+            <p className="mb-3 flex items-center gap-2 text-sm font-medium text-teal">
+              <ShieldCheck className="size-4 shrink-0" />
+              Você tem 7 dias de garantia.
+            </p>
             <a
               href={CHECKOUT_HREF}
               className="btn-primary inline-flex items-center gap-2 rounded-2xl px-7 py-3.5 text-base"
             >
-              Comprar acesso vitalício <ArrowRight className="size-4" />
+              Comece aqui <ArrowRight className="size-4" />
             </a>
           </div>
         </Reveal>
@@ -646,11 +654,15 @@ function Offer() {
               ))}
             </ul>
 
+            <p className="mt-8 flex items-center justify-center gap-2 text-sm font-medium text-teal">
+              <ShieldCheck className="size-4 shrink-0" />
+              Você tem 7 dias de garantia.
+            </p>
             <a
               href={CHECKOUT_HREF}
-              className="btn-primary mt-8 flex w-full items-center justify-center gap-2 rounded-2xl px-6 py-4 text-base"
+              className="btn-primary mt-3 flex w-full items-center justify-center gap-2 rounded-2xl px-6 py-4 text-base"
             >
-              Comprar acesso vitalício <ArrowRight className="size-4" />
+              Comece aqui <ArrowRight className="size-4" />
             </a>
             <p className="mt-3 text-center text-xs text-muted-foreground">
               Pagamento único: de <del className="text-muted-foreground decoration-muted-foreground">R$69,90</del>{" "}
@@ -728,11 +740,15 @@ function FinalCta() {
           <p className="mt-4 text-muted-foreground">
             Organize sua realidade e tenha mais clareza para decidir seus próximos passos.
           </p>
+          <p className="mt-8 flex items-center justify-center gap-2 text-sm font-medium text-teal">
+            <ShieldCheck className="size-4 shrink-0" />
+            Você tem 7 dias de garantia.
+          </p>
           <a
             href={CHECKOUT_HREF}
-            className="btn-primary mt-8 inline-flex items-center gap-2 rounded-2xl px-8 py-4 text-base"
+            className="btn-primary mt-3 inline-flex items-center gap-2 rounded-2xl px-8 py-4 text-base"
           >
-            Comprar acesso vitalício <ArrowRight className="size-4" />
+            Comece aqui <ArrowRight className="size-4" />
           </a>
           <p className="mt-3 text-xs text-muted-foreground">
             Pagamento único · sem mensalidade · acesso vitalício
