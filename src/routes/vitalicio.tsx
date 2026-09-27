@@ -268,7 +268,10 @@ function Hero() {
             <Sparkles className="size-4 text-gold" />
             <span className="font-medium text-gold">Oferta de lançamento</span>
             <span>·</span>
-            <strong className="font-semibold">R$ 49,90</strong>
+            <span className="text-muted-foreground">De</span>
+            <del className="text-muted-foreground decoration-muted-foreground">R$69,90</del>
+            <span>por apenas</span>
+            <strong className="font-semibold text-teal">R$49,90</strong>
             <span>em pagamento único</span>
           </p>
         </Reveal>
@@ -619,7 +622,14 @@ function Offer() {
               <div>
                 <p className="text-sm font-medium text-gold">Oferta de lançamento</p>
                 <p className="mt-1 text-sm text-muted-foreground">Valune Vitalício</p>
-                <p className="mt-1 font-display text-4xl font-semibold sm:text-5xl">R$ 49,90</p>
+                <p className="mt-1 flex flex-wrap items-baseline gap-x-2 font-display sm:text-5xl">
+                  <span className="text-lg font-medium text-muted-foreground sm:text-xl">De</span>
+                  <del className="text-lg font-medium text-muted-foreground decoration-muted-foreground sm:text-xl">
+                    R$69,90
+                  </del>
+                  <span className="text-lg font-medium text-muted-foreground sm:text-xl">por apenas</span>
+                  <strong className="text-4xl font-semibold text-teal sm:text-5xl">R$49,90</strong>
+                </p>
                 <p className="mt-2 text-xs text-muted-foreground">Pagamento único · sem mensalidade</p>
               </div>
               <span className="rounded-full border border-border px-3 py-1 text-xs text-teal">
@@ -643,7 +653,9 @@ function Offer() {
               Comprar acesso vitalício <ArrowRight className="size-4" />
             </a>
             <p className="mt-3 text-center text-xs text-muted-foreground">
-              Pagamento único de R$ 49,90 · condições de garantia apresentadas no checkout.
+              Pagamento único: de <del className="text-muted-foreground decoration-muted-foreground">R$69,90</del>{" "}
+              por apenas <strong className="font-semibold text-teal">R$49,90</strong> · condições de garantia
+              apresentadas no checkout.
             </p>
           </div>
         </Reveal>
