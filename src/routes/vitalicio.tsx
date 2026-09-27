@@ -26,7 +26,7 @@ import {
 import { Reveal } from "@/components/Reveal";
 
 const APP_BASE_URL = "https://app-de-finan-as-pessoais-ten.vercel.app";
-const SIGNUP_HREF = `${APP_BASE_URL}/cadastro`;
+const CHECKOUT_HREF = "https://pay.kiwify.com.br/Hda69Hf";
 const LOGIN_HREF = `${APP_BASE_URL}/login`;
 const TERMS_HREF = `${APP_BASE_URL}/termos`;
 const PRIVACY_HREF = `${APP_BASE_URL}/privacidade`;
@@ -39,13 +39,13 @@ export const Route = createFileRoute("/vitalicio")({
       {
         name: "description",
         content:
-          "Controle contas, cartões, parcelas, metas e despesas em um só lugar. Teste o Valune grátis por 7 dias, sem cartão.",
+          "Controle contas, cartões, parcelas, metas e despesas em um só lugar. Acesso vitalício em pagamento único, com garantia apresentada no checkout.",
       },
       { property: "og:title", content: "Valune — Organize sua vida financeira com clareza" },
       {
         property: "og:description",
         content:
-          "Controle contas, cartões, parcelas, metas e despesas em um só lugar. Teste o Valune grátis por 7 dias, sem cartão.",
+          "Controle contas, cartões, parcelas, metas e despesas em um só lugar. Acesso vitalício em pagamento único, com garantia apresentada no checkout.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -103,8 +103,8 @@ function TopBar() {
           >
             Entrar
           </a>
-          <a href={SIGNUP_HREF} className="btn-primary rounded-xl px-4 py-2 text-sm">
-            Testar grátis
+          <a href={CHECKOUT_HREF} className="btn-primary rounded-xl px-4 py-2 text-sm">
+            Comprar acesso
           </a>
           <button
             type="button"
@@ -233,15 +233,15 @@ function Hero() {
           </h1>
           <p className="mt-5 max-w-xl text-base text-muted-foreground sm:text-lg">
             Veja para onde seu dinheiro vai, acompanhe cartões, parcelas, contas e metas em um só
-            lugar. Teste o Valune por 7 dias, sem cartão.
+            lugar. Tenha acesso vitalício em pagamento único, sem mensalidade.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a
-              href={SIGNUP_HREF}
+              href={CHECKOUT_HREF}
               className="btn-primary inline-flex items-center justify-center gap-2 rounded-2xl px-6 py-3.5 text-base"
             >
-              Começar teste grátis <ArrowRight className="size-4" />
+              Comprar acesso vitalício <ArrowRight className="size-4" />
             </a>
             <a
               href="#como-funciona"
@@ -253,9 +253,9 @@ function Hero() {
 
           <ul className="mt-7 flex flex-wrap gap-x-6 gap-y-3 text-sm text-muted-foreground">
             {[
-              { icon: CalendarClock, label: "7 dias grátis" },
-              { icon: ShieldCheck, label: "Sem cartão" },
-              { icon: BadgeCheck, label: "Pagamento único depois do teste" },
+              { icon: ShieldCheck, label: "7 dias de garantia no checkout" },
+              { icon: BadgeCheck, label: "Pagamento único" },
+              { icon: ShieldCheck, label: "Sem mensalidade" },
             ].map((b) => (
               <li key={b.label} className="flex items-center gap-2">
                 <b.icon className="size-4 text-teal" />
@@ -407,16 +407,16 @@ function SolutionSection() {
 function HowItWorks() {
   const steps = [
     {
+      title: "Conclua a compra",
+      text: "Faça o pagamento único no checkout seguro da Kiwify.",
+    },
+    {
       title: "Crie sua conta",
-      text: "Leva menos de um minuto e não pede cartão.",
+      text: "Use o mesmo e-mail informado na compra para ativar seu acesso.",
     },
     {
-      title: "Organize sua realidade",
-      text: "Cadastre contas, cartões e movimentações.",
-    },
-    {
-      title: "Ganhe clareza todos os dias",
-      text: "Use o teste grátis por 7 dias e decida se quer liberar o acesso completo.",
+      title: "Comece a organizar",
+      text: "O acesso vitalício é liberado após a confirmação do pagamento.",
     },
   ];
 
@@ -450,10 +450,10 @@ function HowItWorks() {
         <Reveal delay={120}>
           <div className="mt-10 flex justify-center">
             <a
-              href={SIGNUP_HREF}
+              href={CHECKOUT_HREF}
               className="btn-primary inline-flex items-center gap-2 rounded-2xl px-7 py-3.5 text-base"
             >
-              Quero testar o Valune grátis <ArrowRight className="size-4" />
+              Comprar acesso vitalício <ArrowRight className="size-4" />
             </a>
           </div>
         </Reveal>
@@ -609,7 +609,7 @@ function Offer() {
             Comece sem risco
           </p>
           <h2 className="mt-4 text-3xl font-semibold sm:text-4xl">
-            Teste o Valune por 7 dias. Depois, escolha continuar com acesso completo.
+            Tenha acesso completo ao Valune com pagamento único.
           </h2>
         </Reveal>
 
@@ -637,13 +637,13 @@ function Offer() {
             </ul>
 
             <a
-              href={SIGNUP_HREF}
+              href={CHECKOUT_HREF}
               className="btn-primary mt-8 flex w-full items-center justify-center gap-2 rounded-2xl px-6 py-4 text-base"
             >
-              Começar meu teste grátis <ArrowRight className="size-4" />
+              Comprar acesso vitalício <ArrowRight className="size-4" />
             </a>
             <p className="mt-3 text-center text-xs text-muted-foreground">
-              Você não precisa informar cartão para testar.
+              Pagamento único de R$ 49,90 · condições de garantia apresentadas no checkout.
             </p>
           </div>
         </Reveal>
@@ -655,12 +655,12 @@ function Offer() {
 function Faq() {
   const faq = [
     {
-      q: "Preciso informar cartão para testar?",
-      a: "Não. Você pode usar o Valune por 7 dias sem cadastrar cartão.",
+      q: "Como recebo o acesso ao Valune?",
+      a: "Após a confirmação do pagamento, crie ou entre na conta usando o mesmo e-mail informado no checkout. O acesso será liberado automaticamente.",
     },
     {
-      q: "O que acontece depois dos 7 dias?",
-      a: "Ao fim do teste, você pode desbloquear o acesso completo ao Valune por R$ 49,90 em pagamento único.",
+      q: "Existe garantia?",
+      a: "As condições de garantia e devolução são apresentadas no checkout da Kiwify antes da conclusão da compra.",
     },
     {
       q: "Existe mensalidade?",
@@ -714,17 +714,16 @@ function FinalCta() {
             Chega de terminar o mês se perguntando para onde foi seu dinheiro.
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Comece grátis, organize sua realidade e tenha mais clareza para decidir seus próximos
-            passos.
+            Organize sua realidade e tenha mais clareza para decidir seus próximos passos.
           </p>
           <a
-            href={SIGNUP_HREF}
+            href={CHECKOUT_HREF}
             className="btn-primary mt-8 inline-flex items-center gap-2 rounded-2xl px-8 py-4 text-base"
           >
-            Criar minha conta grátis <ArrowRight className="size-4" />
+            Comprar acesso vitalício <ArrowRight className="size-4" />
           </a>
           <p className="mt-3 text-xs text-muted-foreground">
-            7 dias grátis · sem cartão · configuração rápida
+            Pagamento único · sem mensalidade · acesso vitalício
           </p>
         </Reveal>
       </div>
